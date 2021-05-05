@@ -1,0 +1,26 @@
+# The train/test net protocol buffer definition
+net: "/home/caffe-sl-master/examples/STRRN/train/code/STRRN_L20_net.prototxt"
+test_iter: 5760
+test_interval: 15400 #500
+
+# The base learning rate, momentum and the weight decay of the network.
+type: "Adam"
+base_lr: 0.0001
+weight_decay: 0.0001
+
+# The learning rate policy
+lr_policy: "fixed"
+
+# Display every 100 iterations
+display: 100
+
+# The maximum number of iterations (15 Epoch)
+max_iter: 231000 #935840
+
+# snapshot intermediate results
+snapshot: 500
+snapshot_prefix: "/home/caffe-sl-master/examples/STRRN/train/model/STRRN_q10"
+
+# solver mode: CPU or GPU
+solver_mode: GPU
+
